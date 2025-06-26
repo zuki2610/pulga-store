@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio | Pulga Store</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Pulga Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link" href="seguimiento.html">Seguimiento</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencias.html">Experiencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="marquesina-header mb-4">
+    <h1 class="marquesina-text text-primary fw-bold m-0">
+      Ven y disfruta de nuestros sabores
+      <span class="envio-gratis ms-3">ENVÍO GRATIS</span>
+    </h1>
+  </header>
+
+ <!-- Hero Section Sobre Nosotros -->
+<section class="hero-sobre-nosotros mb-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Columna de texto -->
+      <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start text-dark">
+        <h2 class="display-5">Sobre Nosotros</h2>
+        <p class="lead">
+          Pulga Store es un emprendimiento juvenil dedicado a la venta de deliciosas arepas, pabellón y sopas.<br/>
+          Nuestro objetivo es ofrecer productos de alta calidad y sabor auténtico, elaborados con ingredientes frescos y locales.<br/>
+          Nos apasiona la cocina tradicional y queremos compartirla con todos.
+        </p>
+      </div>
+      <!-- Columna de imagen decorativa -->
+      <div class="col-md-6 text-center">
+        <video class="hero-image" autoplay muted loop playsinline style="max-width:100%; max-height:300px; border-radius:10px;">
+          <source src="/assets/img/Pulga.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Galería de Productos -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Galería de Productos</h2>
+  <div class="row g-4">
+    <!-- Producto 1 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/arepa.png" class="card-img-top" alt="Arepa" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Arepa Tradicional</h5>
+          <p class="card-text">Arepa de maíz natural, ideal para cualquier momento.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="arepa">
+            <button class="btn btn-outline-secondary btn-minus">–</button>
+            <span class="quantity-number" id="qty-arepa">0</span>
+            <button class="btn btn-outline-primary btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/pabellon.png" class="card-img-top" alt="Pabellón" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Pabellón Criollo</h5>
+          <p class="card-text">El plato venezolano más tradicional y delicioso.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="pabellon">
+            <button class="btn btn-outline-secondary btn-minus">–</button>
+            <span class="quantity-number" id="qty-pabellon">0</span>
+            <button class="btn btn-outline-primary btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/sopa.png" class="card-img-top" alt="Sopa" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Sopa de Res</h5>
+          <p class="card-text">Calientita y nutritiva, perfecta para días fríos.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="sopa">
+            <button class="btn btn-outline-secondary btn-minus">–</button>
+            <span class="quantity-number" id="qty-sopa">0</span>
+            <button class="btn btn-outline-primary btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/tequeños.jpg" class="card-img-top" alt="Tequeños" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Tequeños</h5>
+          <p class="card-text">Deliciosos palitos de queso envueltos en masa de trigo.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="tequenos">
+            <button class="btn btn-outline-secondary btn-minus">–</button>
+            <span class="quantity-number" id="qty-tequenos">0</span>
+            <button class="btn btn-outline-primary btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/empanada.jpg" class="card-img-top" alt="Empanada" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Empanada de Queso</h5>
+          <p class="card-text">Crujiente por fuera, derretida por dentro.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="empanada">
+            <button class="btn btn-outline-secondary btn-minus">–</button>
+            <span class="quantity-number" id="qty-empanada">0</span>
+            <button class="btn btn-outline-primary btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 6 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/cachapa.jpg" class="card-img-top" alt="Cachapa" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Cachapa con Queso</h5>
+          <p class="card-text">Tortilla de maíz tierno con abundante queso de mano.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="cachapa">
+            <button class="btn btn-outline-secondary btn-minus">–</button>
+            <span class="quantity-number" id="qty-cachapa">0</span>
+            <button class="btn btn-outline-primary btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 7 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/hallaca.jpg" class="card-img-top" alt="Hallaca" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Hallaca</h5>
+          <p class="card-text">El sabor navideño en una hoja de plátano.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="hallaca">
+            <button class="btn btn-outline-secondary btn-minus">–</button>
+            <span class="quantity-number" id="qty-hallaca">0</span>
+            <button class="btn btn-outline-primary btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 8 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/jugo.jpg" class="card-img-top" alt="Jugo Natural" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Jugo Natural</h5>
+          <p class="card-text">Guayaba, parchita, tamarindo y más. 100% natural.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="jugo">
+            <button class="btn btn-outline-secondary btn-minus">–</button>
+            <span class="quantity-number" id="qty-jugo">0</span>
+            <button class="btn btn-outline-primary btn-plus">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 9 -->
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="card h-100">
+        <img src="/assets/img/tresleches.jpg" class="card-img-top" alt="Postre Tres Leches" />
+        <div class="card-body text-center">
+          <h5 class="card-title">Tres Leches</h5>
+          <p class="card-text">El postre favorito de todos. Suave y cremoso.</p>
+          <div class="quantity-controls d-flex justify-content-center align-items-center gap-2" data-product="tresleches">
+            <button class="btn btn-outline-secondary btn-minus justify-content-center align-items-center">–</button>
+            <span class="quantity-number justify-content-center align-items-center" id="qty-tresleches">0</span>
+            <button class="btn btn-outline-primary btn-plus justify-content-center align-items-center">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer>
+    <p>Equipo Pulga Store - 2025</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
+<style>
+  .quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .quantity-controls button,
+  .quantity-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50%;
+    padding: 0;
+  }
+
+  .quantity-number {
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+  }
+</style>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras | Pulga Store</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Pulga Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Seguimiento</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiencias.html">Experiencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ <!-- Hero Section -->
+  <section class="hero-contacto mb-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Columna de texto -->
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
+          <h1 class="display-5">Seguimiento de Pedidos</h1>
+          <p class="lead">Aquí puedes revisar el estado de los pedidos realizados en Pulga Store.</p>
+        </div>
+        <!-- Columna de video -->
+        <div class="col-md-6 text-center">
+          <video class="hero-image" autoplay muted loop playsinline style="max-width:100%; max-height:300px; border-radius:10px;">
+            <source src="/assets/img/Pulga.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Seguimiento de Pedidos -->
+  <!-- Tabla de seguimiento -->
+  <main class="container mb-5">
+    <div class="table-responsive">
+      <table id="tabla-pedidos" class="table table-striped table-hover align-middle">
+        <thead class="table-primary">
+          <tr>
+            <th># Pedido</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Ana Martínez</td>
+            <td>Arepa Reina Pepiada</td>
+            <td>2025-06-24</td>
+            <td><span class="badge bg-warning text-dark">En camino</span></td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Carlos Rodríguez</td>
+            <td>Tequeños x6</td>
+            <td>2025-06-23</td>
+            <td><span class="badge bg-success">Entregado</span></td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>María Pérez</td>
+            <td>Empanada de Queso</td>
+            <td>2025-06-22</td>
+            <td><span class="badge bg-secondary">Pendiente</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3">
+    <p class="text-center">Equipo Pulga Store - 2025</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+  <!-- Animación y DataTables -->
+  <script>
+    $(document).ready(function () {
+      $('#tabla-pedidos').css('display', 'none');
+      $('#tabla-pedidos').DataTable({
+        language: {
+          url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-CL.json'
+        }
+      });
+      setTimeout(() => {
+        $('#tabla-pedidos').fadeIn(800);
+      }, 200);
+    });
+  </script>
+</body>
+</html>
+<style>
+/* Estilos generales */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+</style>
