@@ -20,9 +20,9 @@ Tecnologías utilizadas:
 - Bootstrap 5
 - jQuery y plugins (Fancybox, DataTables)
 
-Integrantes del equipo:
-- Carlos Castillo – GitHub: https://github.com/vichiPaz
+Con amor 
+- Isabel Palacios https://github.com/zuki2610
 
 Repositorio GitHub:
-https://github.com/vichiPaz/pulga-store
+https://github.com/zuki2610/pulga-store
 
