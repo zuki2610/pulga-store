@@ -1,4 +1,4 @@
-Pulga Store - Proyecto Evaluación Final
+Pulga Store - Proyecto Evaluación Final Modulo 2 - Frontend
 ---------------------------------------
 
 Descripción:
